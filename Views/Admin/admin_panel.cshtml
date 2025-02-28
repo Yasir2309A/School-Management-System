@@ -1,0 +1,46 @@
+﻿@model IEnumerable<School_Management_System.Models.Admin>
+
+@{
+    ViewData["Title"] = "admin_panel";
+}
+@{
+    Layout = "~/Views/Shared/_Admin_Layout.cshtml";  // Full path from the root
+}
+<h1 class="mt-4">admin_panel</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Password)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>
+            <td>
+                    <a asp-action="admin_edit" asp-route-id="@item.Id">Edit</a> |
+        </tr>
+}
+    </tbody>
+</table>

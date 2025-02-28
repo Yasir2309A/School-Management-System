@@ -1,0 +1,10 @@
+﻿@model IEnumerable<School_Management_System.Models.Teacher>
+
+@{
+    ViewData["Title"] = "Teacher_table";
+}
+@{
+    Layout = "~/Views/Shared/_Admin_Layout.cshtml";  // Full path from the root
+}
+
+@Html.Partial("_teach", ViewData["teach"]);

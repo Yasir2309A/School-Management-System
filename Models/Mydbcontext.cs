@@ -14,7 +14,7 @@ namespace School_Management_System.Models
         public DbSet<Attendance> attendances { get; set; }
         //public DbSet<Studen> StudentRegisters { get; set; }
 
-
+///fff//
 
 
 
